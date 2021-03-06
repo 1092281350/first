@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置取反样式</title>
+    <style type="text/css">
+        p:not(span) {
+           color: blue;
+        }
+        /* 要设置not括号中的样式，取反才有效 */
+        span{
+            color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <p><span>哈哈</span>厉害了</p>
+    <p>厉害</p>
+    <p><span>哈哈哈哈</span>厉害</p>
+    <article>
+        好好学习，天天向上
+    </article>
+</body>
+</html>

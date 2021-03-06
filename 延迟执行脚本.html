@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>外嵌脚本 </title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<meta name="keywords" content="小甲鱼" >
+	<meta name="description" content="演示">
+	<script type="text/javascript" src="hi.js" defer>	</script><!--defer表示延迟执行脚本，只用于外部脚本--
+	/async表示脚本可以异步执行（html解析和获取脚本同时进行，获取完成才执行脚本）
+	/（如果脚本中是用来其他脚本定义的函数或者值，那就不适用了），只用于外部脚本/*css的注释*/-->
+</head>
+<body>
+	<p> 哪来的</p><!--p是块级元素，占一行，a是行内元素，多个a标签一起时不会换行
+	br是插入一个换行符，块级可以包含行内，行内只能包含行内-->
+	
+</body>
+</html>

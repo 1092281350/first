@@ -1,0 +1,19 @@
+在table中添加tr
+ 
+先创建一个tr
+var tr=document.createlement("tr")
+
+关键：：设置tr中的内容,直接修改代码，如果是添加要用 +=
+tr.innerHTML="<td>+name+</td>"+    拼串
+	"<td>+email+</td>"+
+	"<td>+salary+</td>"+
+	"<td><a href='javascript:;'></a></td>";  拼串中引号不能嵌套，可以双引号嵌单引号
+要给a设置单击响应函数
+通过var a=tr.getelementbytagname（“a”）[0];
+a.onclick=dela;
+
+最后在将tr添加到tbody中
+tbody.appendchild(tr)
+
+不能直接在tbody中加（tbody.innerhtml+=）
+因为这样会把原来的都改变，影响性能

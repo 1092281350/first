@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 第一个作为子元素的p样式 -->
+    <style type="text/css">
+    p:first-child{
+        border: 2px solid green;
+    }
+    /* 有时会不行，因为浏览器自动加了script 与p 同级  所以样式跑到script上了
+    这是可以改成p:last-of-type */
+    p:last-child{
+        border: 2px solid red；
+    }
+
+    /* 匹配父元素下唯一子元素样式 */
+    p:only-child{
+        border: 2px solid pink;
+    }
+    /* 当父元素有多个子元素时，设置唯一子元素 */
+    strong:only-of-type{
+        border: 2px solid rgb(53, 168, 53);
+    }
+    /* first——of——type选择范围更广一些 ，其他-of-type同理*/
+
+    /* 可以设置 任意第几个子元素,这里设置第三个p子元素，前面要加p*/
+   p:nth-child(3){}
+    p:nth-last-child(2){}
+    /* p:nth-last-of-type(2)  更方便  就是倒数第二个p元素*/
+
+    </style>
+</head>
+<body>
+    <p><strong>好</strong>好好学学</p>
+    <p>好好学习</p>
+    <p>好好学学<span>习</span></p>
+    <p>好好<span>学</span>习习</p>
+    
+</body>
+</html>

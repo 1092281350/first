@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其他样式</title>
+    <style type="text/css">
+        #box1{
+            width: 10px;
+            padding: 10px;
+            border: 10px solid blue;
+           overflow: hidden; /*设置子元素超出的部分隐藏 
+            overflow:auto; 则会出现滚动框    
+           */
+        } 
+        p{
+            width: 10px;
+        }
+        #c{
+           background-color: yellow;
+            width: 400px;
+            height: 150px;
+            overflow: auto;
+        }
+        #c1{
+           background-color: green;
+            width: 250px;
+            height: 350px;
+          
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+               var box1=document.getElementById("box1");
+               var p=document.getElementsByTagName("p")[0];
+               box1.onclick=function(){
+                //    clientwidth获取可见宽度  返回的是数字（内容加内边距） 
+                //可以直接计算
+                alert(box1.clientWidth);//-要变成后面的字母大写
+                //offsetWeight包括内边距，和边框
+               
+                alert(box1.offsetParent);//返回定位父元素
+               // 获取里当前元素最近的开启了定位的祖先元素
+               //只要position不等于static都是开启了定位 position=“fixed” | relative
+                alert(box1.offsetLeft);
+               //offsetTop,offsetLeft 获取相对于定位父元素的垂直和水平偏移量
+                alert(c1.scrollHeight);
+               //scrollHeight获取元素滚动区域高度
+               }
+               //scrollLeft,scrollTop 水平，垂直滚动条滚动距离
+
+               //当scrollHeight-scrollTop==clientHeight满足，说明竖直滚动框话到最底部了
+           
+            //    如果为表单向添加disabled=“disabled”，表示不可用
+               //为c的滚动条绑定事件
+               var c=document.getElementById("c");
+               var a=document.getElementsByTagName("input");
+               c.onscroll=function(){
+                    //检查是否滚动到底
+                    if(c.scrollHeight-c.scrollTop==c.clientHeight)
+                    {
+                        a[0].disabled=false;
+                        a[1].disabled=false;
+                    }
+                   
+               };
+
+        };
+    </script>
+</head>
+<body>
+    <button id="box1">点我</button>
+    <p>看的到吗</p>
+    <div id="c">
+        <div id="c1"></div>
+    </div>
+    <input type="checkbox" id="a" disabled="disabled">读完了
+    <input type="submit" id="a1" disabled="disabled">
+    
+</body>
+</html>

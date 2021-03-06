@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div的拖拽</title>
+    <style type="text/css">
+        #a1{
+           width: 100px;
+           height: 100px;
+            background-color: gray;
+            position: absolute;
+        }
+        #a2{
+            width: 100px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+           left: 100px;
+           top: 200px;
+            
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var a1=document.getElementById("a1")
+             
+             a1.onmousedown=function(event){
+                 event=event||window.event;
+                var ol=event.clientX-a1.style.left;
+                var ot=event.clientY-a1.style.top;
+
+                 document.onmousemove=function(event){
+                    event=event||window.event
+
+                    var left=event.clientX-ol;
+                    var top=event.clientY-ot;
+
+                    a1.style.left=left+"px";//获取的是数字 要加px
+                    a1.style.top=top+"px";
+                 }
+
+                 document.onmouseup=function(){
+                     document.onmousemove=null;//取消鼠标移动事件
+
+                     document.onmouseup=null;
+
+                 }
+
+                 return false;//取消浏览器提供的默认行为
+
+             }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="a1"></div>
+    <div id="a2"></div>
+</body>
+</html>

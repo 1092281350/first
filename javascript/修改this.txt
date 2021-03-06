@@ -1,0 +1,14 @@
+call(),apply()中传入的第一个参数作为对象，
+
+这个对象会成为函数执行时的this
+
+比如:  a中有sayname：function(){
+	alert(this.name)
+         }方法
+
+
+使用a.sayname.call(b)结果就是b的名字
+
+区别是：
+call(obj,2,3)可以将实参在对象之后依次传递
+apply（obj,[2,3]）需要将实参封装成数组中统一传递

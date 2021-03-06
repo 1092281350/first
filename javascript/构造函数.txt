@@ -1,0 +1,14 @@
+function Person(name) {            习惯上构造函数首字母大写
+	this.name="name";
+}
+
+var per = new Person(“孙悟空”);
+
+在页面中打印一个对象时，就是输出对象的toString()方法的返回值
+console.log(per);
+
+输出字符串前加  +
+ var result=asd;
+console.log(+result)
+
+console.log( person“[name=+this.name+]”)ss

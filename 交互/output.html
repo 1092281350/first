@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form中文本多行输入和output使用（功能不强）</title>
+</head>
+<body>
+	<form oninput="x.value=parseInt(a.value)+parseInt(b.value)" action="" method="get">
+
+		0<input type="range" id="a" value="50" min="0" max="100">100+
+		<input type="name" id="b" value="50" >=
+		
+		<output name="x" for="a b">100</output><!--仅仅用来显示计算结果-->
+<br><br>
+		<textarea name="say" rows="3" cols="30">啦啦啦啦啦啦啦啦啦,一代版本一代神，代代版本玩盖伦</textarea><!---接受多行文本输入
+		rols，cols可以指定文本框的大小
+		3和30是按英文来定义的，一个中文字符=2个英文
+		wrap提交的时候对换行符是否提交规定
+		wrap="off"不自动换行-->
+	</form>
+</body>
+</html>

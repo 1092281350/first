@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style type="text/css">
+    #a{
+        width: 100px;
+        height: 200px;
+        border: 10px solid black;
+    }
+    #s{
+        width: 50px;
+        height: 100px;
+        border: 10px solid black;
+    }
+    </style>
+    <script type="text/javascript">
+    // <!-- onmousemove 事件将在鼠标在元素中移动是，在被触发 -->
+    window.onload=function(){
+        var a =document.getElementById("a");
+        var s =document.getElementById("s");
+        
+        //事件相应函数被触发时，浏览器每次都会将事件对象做实参传入相应函数,
+        //所以用event接受实参
+
+        //事件对象中封装了当前事件相关的一切信息，比如鼠标的坐标，键盘哪个键被按下
+        a.onmousemove=function(){
+           //clientX ,clientY获取鼠标水平竖直坐标
+           
+           //window.event解决兼容性问题
+            s.innerHTML ="x="+window.event.clientX+"<br><br>"+
+        
+            "y=" +window.event.clientY;
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <div id="a">
+
+    </div>
+    <div id="s">
+
+    </div>
+    
+</body>
+</html>

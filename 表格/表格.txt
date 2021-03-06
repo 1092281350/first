@@ -1,0 +1,21 @@
+<table>定义表格
+<tr>表格的 行
+<th >表头单元格
+<td colspan="4"> 数据单元格 4表示横跨4列
+<td rowspan="3"> 3表示站3列
+<caption>表格上加个标题
+<thead>  <tbody> <tfoot>更细致规划单元格
+<colgroup>
+	<col style="background: red"><!--设置第一列背景为红色-->
+	<col span="2" style="background：green"><!--2表示夸两列，就是第二列为绿色-->
+</colgroup>
+
+css中的
+padding 设置表格内容跟边框距离 5px
+border 边界
+border-collapse 边界合并
+background 背景颜色
+color 字体颜色
+thead th {
+	
+}

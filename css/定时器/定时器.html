@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时调用</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var count=document.getElementById("count")
+            //希望程序每间隔一次执行一次
+           
+           
+            //setInterval()定时调用，讲一个函数每隔一段时间调用一次
+            //参数1，回调函数,隔一段时间调用一次
+            //2,毫秒数  1000ms ==1s
+            
+            var num=1;
+           var timer= setInterval(function(){
+                count.innerHTML=++num;
+
+                if(num==100){
+                    clearInterval(timer)
+                }
+            },100)
+            //将一个数字作为返回值
+            //这个数字用来作为定时器的标识
+
+            // clearInterval()可以用来关闭定时器
+            // 将关闭标识对应的定时器
+
+        }
+    </script>
+</head>
+<body>
+    <h1 id="count">1</h1>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为对象相同事件绑定多个响应函数</title>
+    <script type="text/javascript">
+       window.onload=function(){
+            //addEventlistener()  可为同一元素的相同事件绑定多个响应函数 不支持IE8
+        // 参数：
+        // 1，事件的字符串，不要On
+        //2，回调函数，当事件触发时该函数会被调用
+        //3,是否捕获阶段触发事件，需要一个布尔值，一般都传false
+
+        var btn=document.getElementById("btn");
+        //响应函数按照绑定顺序来执行
+        // btn.addEventListener("click",function(){
+        //     alert("hello");
+        // },false);
+
+        // btn.addEventListener("click",function(){
+        //     alert("hi");
+        // },false);
+
+        //IE8用attachEvent("onclick",function(){});
+
+        //定义一个函数，用来完成为指定元素邦定响应函数
+        //参数
+        // obj  要绑定事件的对象
+        // eventStr  事件的字符串 不要on
+        // callback  回调函数
+          function bind(obj,eventStr,callback){
+            //大部分浏览器支持的 this 是obj
+            if(obj.addEventListener){
+            obj.addEventListener(eventStr,callback,false);
+            //用addEventListener绑定的事件，取消默认行为要用event.preventDefault();
+            //IE8不能用 event.preventDefault();
+            //所以用下面方法实现兼容
+            
+            //event.preventDefault||event.preventDefault();
+            
+            //return false;
+            }
+            else{
+            //IE8以下 iE8中的this是window，不能通过callbcak.call(this)修改
+            //所以修改this，可以
+            /* obj.attachEvent("on"+evenStr,function(){
+                callback();
+                });
+                用一个匿名函数封装回调函数  callback()
+                此时的callback是我们自己调用的，浏览器调用的是匿名函数
+                所以callback()  改成callback.call(obj),this 就改成了obj
+
+            */
+            obj.attachEvent("on"+eventStr,function(){
+                callback.call(obj);//修改回调函数的this    从window-->button
+            });
+            }
+            
+            
+        }
+                bind(btn,"click",function(){
+                        alert(this);
+                })
+       }         
+       
+
+    </script>
+</head>
+<body>
+    <button id="btn">
+        点我一下
+    </button>
+</body>
+</html>

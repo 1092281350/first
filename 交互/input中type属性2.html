@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>用户上传文件</title>
+</head>
+<body>	
+	<form action="脚本路径" method="post" enctype="multipart/form-data"><!--应该用post,url不可能显示那么多文件
+	
+														enctype="multipart/form-data"对文件传输要写这个-->
+	<input type="hidden" name="MAX_FILE_SIZE" value="1024"><!--限制上传文件大小为1024kb-->
+	
+	<label>选择你要上传的文件 <input type="file" name="file"  accept="image/*" multiple></label><!--还要enctype属性，发送到服务器之前，
+	确定如何对他编码，只有正确的编码，才能传送完整数据
+	
+	加个multiple可以上传多个文件
+	
+	accept=".jpg,.html,.avi"允许图片，网页，视频
+														
+	accept="audio/*"音频 video/*表示视频文件
+	
+	image/*表示图片文件-->
+
+	</form>
+</body>
+</html>

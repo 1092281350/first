@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可以设置多个背景图</title>
+    <style type="text/css">
+        body{
+            background-image: url("图片路径") ,url("timg.jpg");
+            background-repeat: no-repeat;/* 不让图片重复 */
+            background-position: 10px 20px;/*图片位置 控制图像相对元素水平距离 和垂直距离*/
+            background-attachment: fixed; /*固定不动 是的size无效  local图像会随着滚动而滚动
+            scroll会随着屏幕滚动而滚动*/  
+            background-origin: border-box;/*背景图像从边框的左上角开始绘制*/ 
+            background-clip: content-box;/*背景图像显示区域，虽然从边框左边开始绘制，但是在内容区域开始显示*/
+        }
+        /*多个图片用，隔开
+         左边的图会覆盖右边的图*/
+    </style>
+</head>
+<body>
+    <textarea>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel culpa blanditiis assumenda sint inventore tempore placeat ab saepe mollitia maxime ipsam consequuntur, fuga incidunt, ducimus maiores similique, recusandae architecto?     
+    </p>  
+    </textarea>
+    
+</body>
+</html>

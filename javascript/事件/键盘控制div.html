@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dvi随方向键动</title>
+    <style type="text/css">
+        #a{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #ff0055;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var a=document.getElementById("a")
+            document.onkeydown=function(event){
+            event=event||window.event
+
+            //定义一个变量表示速度
+            var speed=10
+
+            //改变速度
+            if(event.ctrlKey){
+                speed=100
+            }
+                switch(event.keyCode){
+                case 37:
+                    a.style.left=a.offsetLeft-speed+"px"//offsetleft原来的值
+                    break
+                
+                case 38:
+                    a.style.top=a.offsetTop-speed+"px"
+                    break
+                case 39:
+                    a.style.left=a.offsetLeft+speed+"px"
+                break
+                case 40:
+                    a.style.top=a.offsetTop+speed+"px"
+                    break
+                }
+            }
+        }
+
+     </script>
+</head>
+<body>
+    <div id="a"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+<!--<map name="mapname">映射于image图片，使他们产生关联
+
+	配合<area shape="" coords="" alt="" href="">-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图像映射</title>
+</head>
+<body>
+	<img src="timg.jpg" alt="猪猪侠" usemap="#pig"><!--记住名字前要加 # -->
+	<map name="pig">
+		<!--circle需要提供圆心坐标和半径，坐标用画图打开就有了-->
+		<area shape="circle" coords="221,273,100" alt="猪腰" href="http://fishc.com" target="_blank">
+		</area>
+	</map>
+
+</body>
+</html>

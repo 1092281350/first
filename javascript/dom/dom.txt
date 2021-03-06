@@ -1,0 +1,10 @@
+取消a超链接的默认操作，不进行页面跳转
+可以在绑定的函数最后添加  return  false
+也可以 <a href="javascript:;">
+
+windows的操作
+confirm()与alert（）一样  需要字符串作参数
+不同的是confirm有  确认与取消  两个按钮
+而且confirm有返回值 true  false
+
+拼串  （“在中间“+var+”加个变量”）

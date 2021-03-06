@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style type="text/css">
+        [class="wood"]{
+
+        }/*设置设置所有满足 class="wood" 的元素属性*/
+    
+        li[class="wood"]
+        /* 设置li元素中所有满足class="wood" 的元素属性 */
+
+        [class^="wood"]
+        /* 加个^ 表示所有class 已wood开头的元素属性  比如[class="wood-saf"]*/
+
+        [class$="wood"]
+        /* 设置所有class以wood结尾的元素属性 */
+
+        [class*="woo"]
+        /* class中只要包含woo即可 匹配到 */
+
+        [class~="woo"]
+        /* class中必须是woo才能匹配到 */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

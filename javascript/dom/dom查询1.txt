@@ -1,0 +1,29 @@
+定义一个函数，专门为指定元素绑定单击响应函数
+idstr 要绑定单击响应函数的对象的id属性值
+fun 事件的回调函数，当单击元素时，该函数被触发
+
+function myclick(idstr,fun){
+	var a=document.getElementById(idstr);
+	a.onclick=fun；
+};
+
+属性
+id.parentNode返回父节点
+myclick(btn7,function(){
+	var bj =document.gerrtElementById("bj");
+	
+	var ph =bj.parentNode；
+});
+//id.inneText  （ 区别于id.innerHTML ）不含标签 
+
+
+id.previousSibling 返回当前节点的前一个兄弟节点（包含空白文本）
+id.previousElementSibling 不含空白文本 但是ie8及以下不兼容
+
+
+节点属性 
+	nodename      nodetype      nodevalue
+文档节点   #document         9                  null
+元素节点   标签名                 1                  null
+属性节点	属性名		2	属性值
+文本节点	text		3	文本内容

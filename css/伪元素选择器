@@ -1,0 +1,39 @@
+/*::first-line{ }设置第一行文本样式
+
+仅仅对块级元素内的第一行内容有效
+
+对像a元素这类行内元素不起作用
+
+p::first-line{ }让它仅对p元素的第一行文本有效*/
+
+/*::first-letter 对第一个字符进行设置
+
+同样能在div::加让它只对div的第一个元素有效
+
+*/
+
+/*::before  ::after 都和content属性相关
+比如：
+a::before {
+
+    content:"就能在a前面加这行字"
+}
+
+也可以是图片
+比如：
+a::after {
+    content:url(timg.jpg)
+}
+就可以在a的末尾加上这幅图片
+*/
+
+/*::selection 匹配用户选中的文本样式
+比如：
+::selection {
+    
+    background:red;
+    
+    color:green;
+
+}
+*/

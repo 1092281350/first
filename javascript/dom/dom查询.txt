@@ -1,0 +1,27 @@
+id.innerHTML 可以获取元素内部的html代码  也就是标签中间的内容  <p></p>
+
+document.getElementByTagName("li")通过标签名来获取一组元素名对象
+
+元素id.getElementByTagName("li") 获取当前节点的指定标签名 后代节点
+
+
+下面是属性
+
+元素id.childnodes  获取元素所有文本的节点   包括空格  dom标签间空白也会当成文本节点（ie8不会）
+举例：
+<ul id=city>
+	<li>北京</li>
+	<li>北京</li>
+	<li>北京</li>
+	<li>北京</li>
+</ul>
+var cns =city.childNodes
+cns.length=9
+
+元素id.children 获取所有子元素  不包括空白文本
+var cns2=city.children
+
+firstChild 获取元素的第一个子节点 包括空白文本
+
+
+

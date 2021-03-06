@@ -1,0 +1,25 @@
+<head>
+	<style>
+	ul.a(list-style-type:square)<!--设置表格前标志为方形---->
+	ul{
+		list-style-image:url("链接")<!--自定义表格前标志图案-->
+	}
+	</style>
+</head>
+
+<body>
+<ul class="a"><!--ul表示无序列表-->
+	<li>每一项用li标起来</li>
+	
+	
+</ul>
+
+<ol><!--有序列表--><!--list-style-type也可以设置有序列表-->
+	<li>同上</li>
+
+</ol>
+
+<dl><!--定义列表-->
+<dt><!--写术语-->
+<dd><!--对于术语的描述-->
+</body>

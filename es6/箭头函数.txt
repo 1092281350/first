@@ -1,0 +1,8 @@
+1，只有一个参数时，（）可以省去
+2，只有一个return时，{}可以省去
+
+function show(i){
+alert(i);
+}
+等价于
+show i=>alert(i);

@@ -1,0 +1,37 @@
+识别不同浏览器
+
+属性
+由于历史原因，大部分属性不能帮助我们识别浏览器
+
+一般使用useragent 判断浏览器信息
+
+useragent是一个字符串
+
+//判断浏览器是火狐还是谷歌
+
+var ua=navigator.useragent
+   if(   /firefox/i.test(ua)   ){
+          //如果是火狐
+     alert（“火狐”）	
+     }
+else if("activeXobject”in window  ){
+    
+	 alert("ie")
+
+//ie11中已经将微软和ie相关标识去除，所以不能通过useragent来识别ie浏览器
+     }
+
+//通过一些特有对象来判断IE
+“activeXobject”in window  //检查一个对象里是否有这个属性
+
+
+
+将对象转换成布尔值   对象前加   ！！
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延时调用</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var num=1
+            // setTimeout()延时调用
+            //函数不马上执行，过多少秒才执行，且只执行一次
+            var timer= setTimeout(function(){
+                //过多少秒才执行的函数
+            },3000)
+
+            clearTimeout(timer)//关闭延时调用
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

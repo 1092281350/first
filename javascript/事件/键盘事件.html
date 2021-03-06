@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>键盘</title> 
+    
+   <!--altkey ctrlkey  shiiftkey  判断这三个键是否被按下 返回布尔值-->
+
+<script type="text/javascript">
+        window.onload=function(){
+            //onkeydown   onkeyup  按键被按下和松开
+
+            //键盘事件一般绑定给可以获取焦点的对象（表单项)或者document
+            document.onkeydown=function(event){
+             //如果一直按下，事件会一直触发
+                event=event||window.event
+
+                //可以通过keyCode获取按键编码
+                //alert(event.keyCode)
+
+                //判断ctrl和y是否同时被按下
+
+                if(event.keyCode == 89 && event.ctrlKey){
+                   alert("ctrl和y都被按下")
+                }
+
+            }
+            
+            document.onkeyup=function(){
+                //不会连续触发
+
+            }
+
+            var input=document.getElementsByTagName("input")[0]
+
+            input.onkeydown=function(event){
+                event=event||window.event
+
+                //不能输入数字  小键盘96-105  一排的数字 48-57
+                if((event.keyCode>=96 && event.keyCode<=105) || (event.keyCode>=48 && event.keyCode<=57)){
+                    return false
+
+                }
+                
+
+                //在文本框中输入内容，属于onkeydown的默认行为
+                //如果取消默认行为，则输入内容不会出现在文本框中
+               // return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text">
+</body>
+</html>

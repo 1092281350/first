@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>限制用户输入</title>
+</head>
+<body>	
+	<form action="脚本路径" method="post" ><!--撒-->
+	
+	<label>年龄：<input type="number" name="age" min="1" max="100" step="1"></label><!--number限定输入的为数字
+	
+	min,max.step限制最大，最小，步长-->
+	
+	<label>感动到什么程度：<input type="range" name="age" min="1" max="100" step="1"></label>
+	
+	<!--range实现数值滚动条-->
+	
+	<!--email,tel,url邮箱 电话和网址-->
+	
+	<!--pattern=正则表达式,涉及字符串匹配的都可以用，扩展阅读中有
+	pattern限制所填内容的格式-->
+	</form>
+</body>
+</html>

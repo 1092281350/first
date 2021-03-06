@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百叶窗</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }/* 取消所有元素默认值 */
+
+    ul, ol{
+        list-style: none;
+    }
+    body {
+ 
+        background-repeat: no-repeat;
+
+    }
+    .main{
+        width: 850px;
+        height: 320px;
+        margin: 150px auto;/*里屏幕上方150px  水平居中*/
+        overflow: hidden;
+    }
+    li{
+        width: 160px;
+        float: left;/*让它在一行显示*/
+        border-left: 1px solid blue;
+         position: relative;/*作为参照物 */
+        transition: 1s;
+    }
+    .flag{
+        position: absolute;/*相对参照物的位置*/
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        height: 60px;
+        line-height: 60;
+       text-align: center; /* 文字居中 */
+        color: #fff;
+        background: rgba(0,0,0,0.5); 
+    }
+    .main:hover li{           /*鼠标划上main的时候，让它的li的宽度变成40px*/
+        width: 40px;
+
+    }
+  .main li:hover{            /* 鼠标划上li的时候，让li宽度变成640px*/
+      width: 640px;
+  }
+  /* 给Li一个过渡，不那么生硬 用transition*/
+
+
+
+    </style>
+</head>
+<body>
+    <!-- /*ul.main>(li>img[scr=""]+div.flag{文本内容})*5  这块是这样写出来的*/ -->
+    <ul class="main">
+        <li>
+            <img src="timg.jpg" alt="zzx">
+            <div class="flag" zzx=""></div>
+        </li>
+        <li>
+            <img src="timg1.jpg" alt="zzx1">
+            <div class="flag" zzx=""></div>
+        </li>
+        <li>
+            <img src="timg2.jpg" alt="zzx2">
+            <div class="flag" zzx=""></div>
+        </li>
+        <li>
+            <img src="timg3.jpg" alt="zzx3">
+            <div class="flag" zzx=""></div>
+        </li>
+        <li>
+            <img src="timg4.jpg" alt="zzx4">
+            <div class="flag" zzx=""></div>
+        </li>
+    </ul>
+</body>
+</html>

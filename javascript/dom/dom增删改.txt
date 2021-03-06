@@ -1,0 +1,32 @@
+1，增加节点
+var b=document.createElement("div") 创建元素节点
+var a=document.createTextNode(“好”)      创建文本节点
+ 将   好   设置为  div的子节点
+appendchild() 向一个父节点中添加一个子节点
+父.appendchild("a")
+ 将div添加到指定位置
+city.appendchild(“父”)
+
+insertbefore()在指定子节点前插入一个新的子节点
+语法   父。insertchild(li,bj)
+
+替换子节点
+city.replacechild(li,bj)第一个为新节点
+
+删除子节点bj
+city.removechild(bj)
+
+子节点.parentNode直接通过自身获取父节点
+bj.parentNode.removeChild(bj)
+
+修改#city内的HTML代码
+city.innerHTML+="<li>广州</li> "但是不建议这么用，因为如果其他的li绑定事件就会都没了
+
+
+推荐用两者结合
+var li=document.createlement("li")
+
+li.innerHTML=广州
+
+city.appendchild(li)
+

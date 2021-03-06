@@ -1,0 +1,6 @@
+window.onload=function(){           //可以把script代码写在head，页面加载完成在执行
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){     //将id=btn的元素添加方法
+	   alert("hello");
+	};
+};

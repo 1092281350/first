@@ -1,0 +1,13 @@
+获取元素 当前显示 的样式
+语法：元素.currentstyle.样式名（仅限IE）
+
+其他浏览器中 可以使用这个方法：
+getComputedStyle()  可以直接使用，是window的方法
+第一个参数：要获取样式的元素
+第二个参数：可以传递一个伪元素（像before和after），但是一般都传null
+返回一个对象，对象中封装了当前元素的各个样式
+通过对象.样式名来读取
+var obj=getComputedStyle(box1,null)
+alert(obj.width)
+
+

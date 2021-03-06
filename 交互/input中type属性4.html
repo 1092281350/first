@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>用户上传文件</title>
+</head>
+<body>	
+	<form action="脚本路径" method="post" ><!--撒-->
+	<label>placeholder占位提示框<input type="email" name="email" pattern="正则表达式" placeholder="提示应怎么做" 
+	
+	required size="30" maxlength="20" ></label>
+	
+	<label>我试试<input type="tel" name="tel" list="urllist"></label>
+	
+	<!--required加上表示必须要填写-->
+	
+	<!--maxlength设置用户输入最大长度-->
+	
+	<!--size设置输入框的长度属性,以免信息太多看不见-->
+	</form>
+	
+	<datalist id="urllist"><!--数据列表，在表单外写，且指定id，作为input的list的值-->
+		<option>选项1</option>
+		<option>选项2</option>
+	</datalist>
+</body>
+</html>

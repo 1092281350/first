@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不同语言间传对象</title>
+</head>
+<body>
+    <p>json中的对象只能用于js</p>
+    <p>创建一个对象obj={“name”:“john”,“age”=18}</p>
+    <p>json就是特殊格式的字符串  var obj=‘{“name”:“john”,“age”=18}’</p>
+    <p>这个字符串可以被任意语言识别，并且可以转换成任意语言的对象</p>
+    <p>json用于数据交互</p>
+    <p>json的js对象的格式一样，只不过json字符串中的属性名必须加双引号</p>
+    <p> json分类
+            1，对象{}   2，数组【】
+    </p>
+    <p>json中允许的值：字符串，数值，布尔值，null,对象（不包括函数对象，仅仅是普通对象），数组</p>
+    <p>
+        var obj=‘{“arr”:[1,2,3]}’对象中的属性是数组
+        var obj1='[{“name”:“john”,“age”=18},{“name”:“john”,“age”=18}]'数组的值是对象
+        以上都是json
+    </p>
+    <p>提供了一个工具类，JSON，将json转换为js对象，也可以将js对象转换为json</p>
+    <br><br>
+    <p>JSON.parse（）将一个json字符串转换成js对象 并且返回对象</p>
+    <p>js对象转json       
+        JSON,stringify()
+        ,需要一个js对象做参数，返回一个JSON字符串
+    </p>
+
+    <p>eval(),这个函数可以执行一段字符串形式的js代码，执行，并返回结果</p>
+<p>如果执行的字符传中，含有大括号，它会将{}当成代码块,如果不希望当成代码解析，则将在{}前后加（）</p>
+    <p>eval   的执行性能差，而且存在安全隐患</p>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>与用户交互的界面</title>
+    <style type="text/css">
+    /*设置表单元素可用 和 不可用 时的样式*/
+    :enabled{
+        outline: 1px solid green;
+
+    }
+
+    :disabled{
+        background-color: grey;
+    }
+    /* 表单元素被选中时的样式,此处是兄弟选择器，设置的是被选项后面紧跟着的文本样式*/
+    :checked + span{ 
+        width: 50px;
+        height: 50px;
+    }
+
+    /* 设置 必填 和 可选 的样式 */
+    :required{
+        outline: 3px red;
+    }
+
+    :optional{
+         outline: 3px green;
+    }
+
+    /* 设置默认元素样式 */
+    :default{
+        outline: 3px red solid ;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="a">可用</label>
+            <input type="text" name="a">
+        </p>
+        <p>
+            <label for="b">可用</label>
+            <input type="text" name="b" disabled>
+        </p>
+    </form>
+</body>

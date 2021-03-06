@@ -1,0 +1,14 @@
+通过js修改元素样式
+语法：元素.style.样式名=样式值
+
+注意：css样式名中含有  -  这种名字在js中不合法
+background-color 改成backgroundColor  改成驼峰命名法    -后的字母大写
+
+改的是内联样式，js修改的样式会立即显示
+
+但是如果style 写了  ! important  （最高优先级）会导致js不能修改 
+
+
+js读取元素样式   ：：读取和设置的都是内联样式
+语法：  元素.style.样式名
+无法读取css中的样式

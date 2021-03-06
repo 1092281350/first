@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类操作二级菜单</title>
+    <style type="text/css">
+      
+      
+        .c{
+            height: 0px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #one{
+            display: flex;         /*直接子元素会按行排列*/
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+            padding: 30px;
+           
+        }
+     
+     </style>
+    <script type="text/javascript" src="tools.js"></script><!--连接到添加的工具-->
+     <script type="text/javascript">
+        window.onload=function(){
+            
+            //获取所有一级菜单
+            var span=document.querySelectorAll(".yiji")//兼容IE8，括号内写css选择器
+            
+            //创建一个变量，获取当前打开的一级菜单
+            var opendiv=span[0].parentNode
+            
+            //为所有span绑定单击响应函数
+            for(var i=0;i<span.length;i++){
+                span[i].onclick=function(){
+                    //this代表当前span
+                    var parent=this.parentNode//选择当前span的f父元素div
+
+                    //切换之前获取元素高度
+                    var be=parent.offsetHeight;
+
+                    //切换parent
+                  toggleclass(parent,'c')
+                    
+                  //切换后获取元素高度
+                  var end=parent.offsetHeight
+                  
+                  
+                
+                  if(opendiv!=parent && !hasclass(opendiv,'c')){
+                  //将打开的关上
+                  //addclass(opendiv,'c')
+                    //为了统一的动画效果，将ADD改为toggle
+                    toggleclass(opendiv,'c')
+                }                      //第一个条件判断两个变量是否一致，避免死循环
+                                        //第二个条件让toggleclass只进行添加
+
+                    //修改打开的div
+                    opendiv=parent
+
+
+                }
+
+            }
+
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <div id="my" class="sd">
+        <div id="one">
+            <span class="yiji">好好学习</span>
+            <a href="#">123</a>
+            <a href="#">456</a>
+            <a href="#">789</a>
+        </div>
+        <div class="c" id="one">
+            <span class="yiji">天天向上</span>
+            <a href="#">223</a>
+            <a href="#">456</a>
+            <a href="#">789</a>
+        </div>
+        <div class="c" id="one">
+            <span class="yiji">good study</span>
+            <a href="#">323</a>
+            <a href="#">456</a>
+            <a href="#">798</a>
+        </div>
+        <div class="c" id="one">
+            <span class="yiji">daydayup</span>
+            <a href="#">423</a>
+            <a href="#">456</a>
+            <a href="#">789</a>
+        </div>
+
+    </div>
+</body>
+</html>

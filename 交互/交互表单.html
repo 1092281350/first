@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>最简单的表单</title>
+</head>
+<body><!--target表示在新标签页将结果反馈出来-->
+	<form target="_blank" action="timg.jpg" method="post"><!--post表示向服务器提交重要数据，get将数据显示在前面的url中，后来的人就能看到-->
+		
+		<fieldset><!--对这些领域进行区分-->
+			
+			<legend>先写这个</legend><!--定义说明文字，配合fieldset使用-->
+			
+			名字：<input type="text" name="name" autocomplete="on"><br><br><!--text是明文，输入者能看到自己输入的东西
+															  password输入者看不到-->
+			邮箱：<input type="text" name="email"><br><br><!--value=""设置默认值-->
+															<!--直接加autofocus，就会聚焦到这一栏，可以直接填写	
+															input和button都有disable的属性，直接加上后就不能点了
+															同上区别于readonly，不能修改他的值-->
+			<label>密码：<input type="password" name="name"></label><!--隐式关联,label包裹了input，所以点击密码会直接让你输入-->
+			</fieldset>
+			<fieldset>
+			<legend>等会再写</legend>
+			<!--select和option写性别这一栏-->
+			<label for="sex">性别：
+				
+				<select name="sex">
+				
+					<optgroup label="地球人">        <!--optgroup对下拉选项框进行细分-->
+					<option value="man">男</option>
+					<option value="woman">女</option>
+					</optgroup>
+					
+					<optgroup label="火星人">
+					<option value="gourd">葫芦娃</option>
+					<option value="pig"> 猪猪侠</option>
+					</optgroup>
+					
+				</select>
+			
+			</label><br><br>
+			
+			<label for="12">你是好人吗 </label>	<input type="text" name="12" id="12"><!--显式关联input中的id，label中的for指定了id-->
+		</fieldset>
+		<button type="submit">提交</button>
+		<button type="reset">重写</button>
+		<button type="botton">按钮</button>
+	</form>
+
+</body>
+</html>

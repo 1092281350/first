@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5种选择器</title>
+    <style>
+        * {              /*通用选择器*/
+            padding: 10px; /*内边距*/
+            background-color: blue;
+        }
+
+        h2 {
+            text-align: center; /*居中*/
+
+        }
+
+        p {
+            text-indent: 2em;/*开头缩进2格*/
+
+        }
+
+        span {
+            color: gray;
+            padding: 0px;/*以免被上面通用选择器的10px影响*/    
+        }
+
+        img {
+            width: 212px;/*调整图片大小*/
+
+        }
+
+        /*类选择器，通过元素的class属性来匹配，注意：前面要加 . 
+        比如 <p class=a></p>*/
+        .a {
+
+
+        }
+        /*id选择器，通过元素的id属性来匹配，注意： 前面要加 # 
+        比如 <p id=b></p>  id的值必须是唯一的，这就意味着id选择器是单个元素*/
+        #b {
+
+
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

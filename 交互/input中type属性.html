@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>input实现按钮样式，单选框，多选框，时间日期</title>
+</head>
+<body>
+	<form action="脚本路径" method="post">
+		名字:<input type="text" name="name"><br><br>
+		
+		<label>性别：</label>
+		<!--radio设置单选框，适用于选项不是很多-->
+		<label><input type="radio" name="sex" value="male">男</label>
+		<label><input type="radio" name="sex" value="female">女</label><!--name要一样才能互斥，不然两个都能选上-->		
+		
+		<br>
+		<br>
+		<!---type设置成checkbox,变成多选-->
+		<label><input type="checkbox" name="sex" value="male">男</label>
+		<label><input type="checkbox" name="sex" value="female">女</label>
+		
+		<!--时间日期-->
+		<label>时间：<input type="time" name="time"></label>
+		<br><br>
+		<label>本地时间和日期：<input type="datatime-local" name="datatime-local"></label>
+		<!--input代替button-->
+		<input type="submit" value="提交">
+		<input type="reset" value="重写">
+		<input type="button" onclick="msg()" value="按钮">
+		
+	
+	</form>
+	
+	<script>
+		function msg(){
+			alert("一个简单地脚本，显示出的提示框");
+		}
+	</script>
+</body>
+
+</html>

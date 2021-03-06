@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+        $(document).ready( function(){
+
+$("").click(function () { 
+    alert("点击")
+ })
+
+        }).mousedown(function (event) {if(event.keyCode==8){
+            alert("按下空格")
+        } 
+         }).
+         
+         mouseup(function () {
+             $(this).css()//当前文本框
+           })//前端的一些方法，事件 ，会在某些情况下失效
+
+           $("").focus(function(){
+                $(this).css()
+
+           })//获取焦点
+
+           .blur(function () {
+               $
+               (this).css()
+             })//失去焦点
+
+        $().bind("click",function () {  })//bind形式单击事件
+
+</script>
+
+</head>
+<body>
+jquery事件在ready内部，没有on
+
+click：单击事件
+mouse ：鼠标事件
+keyboard:键盘事件
+
+支持链式事件
+执行完后，返回对象本身，所以可以继续点
+
+绑定事件
+$().bind("事件名"，[数据]，函数)
+
+批量绑定//整体用大括号，事件内部用冒号，事件之间用逗号
+$().bind({事件名1:[数据1]:函数1,事件名2:[数据2]:函数2,事件名3:[数据3]:函数3})
+
+移除事件
+$().unbind("事件名")
+
+
+复合事件
+hover（f1,f2）：切换使用mouseover//鼠标悬浮，mouseout//鼠标离开
+
+toggle（f1,f2,f3）：循环做多个click事件     (jQuery1.9以前的有用)
+
+toggle()//显示效果（隐藏与显示）
+隐藏hide（[消失的速度]，[回调函数，只写方法名（引用）]）
+显示show（[显示的速度]，[回调函数]）
+
+通过改变透明度
+fadein()//淡入，显示  
+fadeout()//淡出，隐藏
+
+通过高度
+slideDown()//显示，下拉
+slideup()//隐藏，上拉
+
+</body>
+</html>

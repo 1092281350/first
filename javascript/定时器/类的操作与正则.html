@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类的操作与正则</title>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+        }
+
+        .box1{
+            width: 100px;
+            height: 500px;
+           
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            // 通过style属性啦修改元素样式，每修改一个样式，浏览器就需要重新渲染
+            // 一次页面，这样执行的性能较差
+            var box=document.getElementsByClassName('box')[0]
+            // 可以通过修改class属性，来修改样式
+            var btn =document.getElementsByClassName('btn')[0]
+          
+            btn.onclick=function(){
+                //在原来的基础上增加样式，注意：b2前有空格
+               // addclass(box,'box1')   //box1 作为类名 添加到box中，要加‘’
+                
+                toggleclass(box,'box1')
+               // removeclass(box,'box1')   删除指定class属性
+            }
+
+            //定义一个函数，为一个元素中添加指定class属性值
+            //cn要添加的class属性值
+            function addclass(obj,cn){
+                //检查是否有cn
+                if(hasclass(obj,cn)){}//有就不添加
+                else{                   //没有才添加
+
+                    obj.className+=' '+cn
+                }
+            }
+
+            //判断一个元素中是否含有指定class属性值
+            function hasclass(obj,cn){
+               // var reg=/\bb2\b/;   //\b表示单词边界，有独立的b2，但是这样写死了
+
+                //所以用另一种方法创建,将变量cn传入，从而动态生成正则表达式
+                var reg=new RegExp('\\b'+cn+'\\b')
+                return reg.test(obj.className)
+
+            }
+
+            //删除一个元素的指定class属性
+            function removeclass(obj,cn){
+                var reg=new RegExp('\\b'+cn+'\\b')
+
+                obj.className=obj.className.replace(reg,'')
+            }
+
+            //切换一个类
+            //如果元素中有该类，就删了
+            //如果元素中没有，就添加
+            function toggleclass(obj,cn){
+                
+                //判断obj中是否有cn
+               if( hasclass(obj,cn)){
+                   removeclass(obj,cn)
+               }
+               else{
+                   addclass(obj,cn)
+               }
+
+            }
+        
+        }
+    
+    </script>
+</head>
+<body>
+    <button class="btn">按钮</button>
+    <br><br>
+    <div class="box"></div>
+</body>
+</html>

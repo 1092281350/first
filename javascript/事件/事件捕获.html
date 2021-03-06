@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捕获</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var btn=document.getElementById("btn");
+            var btn1=document.getElementById("btn1")
+
+            btn.onclick=function(){
+                alert(1)
+            }
+
+            btn1.onclick=function(){
+                alert(2)
+            }
+
+            //btn.setCapture();//设置btn捕获下一次所有事件  仅对IE有效 
+           // btn.releaseCapture();//取消捕获  j仅对IE8
+        
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <button id="btn1">按钮1</button>
+</body>
+</html>

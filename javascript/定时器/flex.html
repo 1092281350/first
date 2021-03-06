@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .flexbox{
+        /* 开启flex布局 */
+        display: flex;
+        /* 设置子元素的布局方式，基于主轴 */
+        justify-content: center;
+        /* 让子元素尽量拉到最大,可以保持原来的状态（flex-start）
+        center 表示让他们垂直居中，垂直于主轴 */
+        align-items:stretch;
+
+        /* 让他们按列排列 */
+        /* flex-direction: column; */
+
+        
+
+
+
+    }
+    img{
+        max-height: 450px;
+        width: 25%;
+        
+      
+    }
+    .flexbox img:nth-child(1),img:nth-child(3){
+        width:15%;
+    }
+
+    
+    
+    </style>
+
+</head>
+<body>
+    <div class="flexbox">
+        <img src="QQ7.png" alt="1 ">
+        <img src="QQ5.png" alt=" 2">
+        <img src="QQ8.png" alt="3 ">
+        <img src="QQ6.png" alt="4 ">
+        
+    
+       
+        
+      
+    
+    </div>
+</body>
+</html>

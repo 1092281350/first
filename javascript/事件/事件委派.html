@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委派，只绑定一次事件，就可以应用到多个元素，即使元素后添加</title>
+    <script type="text/javascript">
+    window.onload=function(){
+        var btn1=document.getElementById("btn1");
+        var u1=document.getElementById("u1");
+        var a=document.getElementsByTagName("a");
+
+        btn1.onclick=function(){
+            var li =document.createElement("li");//创建新的li
+
+            li.innerHTML="<a href='javascript:;' class='link'>新超</a>"//新的li中的超链接
+
+            u1.appendChild(li);//将li添加到ul中
+        }
+
+        //只绑定一次事件，应用到多个元素上，及时还没创建
+        //委派给共同的祖先元素
+        //事件委派,新子元素的同一事件通过冒泡到祖先元素
+        u1.onclick=function(event){
+            //如果触发事件的对象是期望的元素，则执行，否则不执行
+            //this  事件给谁绑定 this就是谁  所以不能用this
+            event=event||window.event
+           
+            //event.target 返回发生此事件的元素 点谁就是谁
+            
+            //判断发生事件对象是否为li
+            if(event.target.className=="link"){
+             alert(event.target);
+            }
+        }
+
+
+    }
+    </script>
+</head>
+<body>
+    <button id="btn1">添加新超链接</button>
+
+    <ul id="u1">
+        <li><a href="javascript:;" class="link a">超1</a></li>
+        <li><a href="javascript:;" class="link">超2</a></li>
+        <li><a href="javascript:;" class="link">超3</a></li>
+    </ul>
+</body>
+</html>

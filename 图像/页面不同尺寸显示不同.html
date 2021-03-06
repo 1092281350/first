@@ -1,0 +1,13 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>不同大小的网页显示不同图片</title>
+</head>
+<body>
+	<picture>
+		<source media="(min-width:1024px)" srcset="timg.jpg"><!--最小宽度为1024，才能显示该图片-->
+		<source media="(min-width:512px)" srcset="timg1.jpg">
+		<img src="timg2.jpg" alt="厉害了我的猪" style="width:auto">
+	<picture>
+</body>
+</html>

@@ -1,0 +1,8 @@
+获取body  可以写body=document.body (body的引用)
+
+获取class为box1中所有的div
+//.box1 div
+document.querySelector（".box div"）css选择器做参数
+ 该方法只返回，满足条件的第一个元素，
+
+document.queryselectorall()不同是返回所有满足条件的元素，封装到一个数组中

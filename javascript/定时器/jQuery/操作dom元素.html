@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    样式操作
+        jQuery对象.css（“属性名”，“属性值”）
+
+    追加或移除样式
+        addClass（"x x x"）
+
+        remove("x x x")
+        remove()//移除全部
+
+        toggleClass()//切换追加与移除
+
+    节点与属性操作
+        创建节点：var a =$("<li>123</li>")
+                $(选择器)：获取节点
+                $(DOM对象)：转换
+
+        内容插入:$(b).append(a)//内部插入在最后
+                    prepend: 内部插入插入在最前
+                    after//插在外部的后面
+                    before//插在外部前面
+        删除节点：
+            remove（）彻底删除
+            empty（） 只删除内容
+        
+        克隆节点
+            clone（true| false）true包括事件
+
+        属性操作
+            attr("属性名")  获取属性值
+            attr("属性名"，“属性值”)  赋值
+
+            removeattr("属性名")  删除属性
+
+
+    获取集合与遍历集合
+            子节点集合  $().children()//获取子节点，下面第一层
+
+            后代节点集合  $().find()//不推荐使用
+    
+
+    遍历集合：
+        $().each（function（[index],[element]）{
+                //操作每一个元素，index是当前元素的下标
+
+        }）
+</body>
+</html>

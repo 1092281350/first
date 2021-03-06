@@ -1,0 +1,23 @@
+同一个类中含有共同的属性和方法，都可以直接放在原型对象中
+
+function Myclass(){
+
+}
+
+Myclass.prototype.name="我是原型对象中的名字"
+
+Myclass.prototype.sayname= function(){
+	alert(this.name);
+}
+这些都是公共的属性和方法
+
+var a = new Myclass();
+
+console.log(a.name)
+
+__proto__原型对象
+
+a.__proto__.hasOwnProperty（"name"）原型对象中是否有name属性
+
+实例a用__proto__表示原型
+

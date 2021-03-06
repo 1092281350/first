@@ -1,0 +1,3 @@
+history.length获取当次已经访问页面数量
+
+
